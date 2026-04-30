@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Allow user avatar images from Google
+  output: "standalone",
   images: {
     remotePatterns: [
       {
@@ -10,7 +10,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  // Ensure server-only packages aren't bundled for client
   serverExternalPackages: ["sharp", "cheerio"],
 };
 
