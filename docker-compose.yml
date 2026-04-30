@@ -3,10 +3,11 @@ services:
     build: .
     ports:
       - "3000:3000"
-    environment:
-      - NODE_ENV=production
     env_file:
-      - .env
+      - .env.production
+    depends_on:
+      db:
+        condition: service_healthy
   db:
     image: postgres:16
     restart: unless-stopped
