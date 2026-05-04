@@ -34,7 +34,7 @@
 # volumes:
 #   pgdata:
 
-#Working version from Robert
+
 services:
   web:
     build: .

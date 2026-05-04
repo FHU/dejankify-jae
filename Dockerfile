@@ -45,7 +45,7 @@
 # CMD ["sh", "-c", "until npx prisma db push --config prisma.config.ts; do echo 'Waiting for DB...'; sleep 2; done && node server.js"]
 
 
-#Working Version (From Robert)
+
 FROM node:22-alpine AS deps
 WORKDIR /app
 COPY package.json package-lock.json ./
